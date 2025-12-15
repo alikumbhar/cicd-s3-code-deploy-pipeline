@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+    - echo "Portfolio website webpage uploading started..."
+ 
+  post_build:
+    commands:
+    - echo "deploying to S3 buckets"
+artifacts:
+  files:
+    - '**/*'
