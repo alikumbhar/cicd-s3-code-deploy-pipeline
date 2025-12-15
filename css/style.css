@@ -1,0 +1,212 @@
+/* -----------------------
+   Global Reset & Theme
+------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #020617;
+  --bg-light: #0f172a;
+  --card-bg: rgba(15, 23, 42, 0.7);
+  --accent: #38bdf8;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* -----------------------
+   Links
+------------------------*/
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------
+   Hero Section
+------------------------*/
+.hero {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #0f172a 50%,
+    #020617 100%
+  );
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.hero p {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* -----------------------
+   Sections
+------------------------*/
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.section h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.section h4 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.section h5 {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 1.2rem;
+}
+
+/* -----------------------
+   Text
+------------------------*/
+.section p {
+  color: var(--text-muted);
+  max-width: 850px;
+}
+
+/* -----------------------
+   Skills Grid
+------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.grid li {
+  list-style: none;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.grid li:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+/* -----------------------
+   Lists
+------------------------*/
+.section ul {
+  margin-top: 0.6rem;
+  padding-left: 1.2rem;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+/* -----------------------
+   Cards (Projects)
+------------------------*/
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(2, 6, 23, 0.9)
+  );
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card h4 {
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.card strong {
+  color: var(--accent);
+}
+
+/* -----------------------
+   Footer
+------------------------*/
+footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* -----------------------
+   Responsive
+------------------------*/
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.2rem;
+  }
+}
